@@ -2,6 +2,7 @@ package wang.tyrael.learnpatch
 
 import android.app.Activity
 import android.os.Bundle
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : Activity() {
@@ -12,6 +13,17 @@ class MainActivity : Activity() {
 
         // Example of a call to a native method
         sample_text.text = stringFromJNI()
+
+        if (this.getVersioncode() > 2) {
+            Log.d("tim", )
+        }
+    }
+
+    private fun doBspatchTask(){
+        async {
+
+            var oldPath = this@MainActivity.getApk
+        }
     }
 
     /**
